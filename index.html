@@ -1,409 +1,61 @@
-<!-- saved from url=(0023)http://app.xiaoyun.com/ -->
-<!DOCTYPE html>
+<!-- saved from url=(0050)http://10.145.209.249/webAuth/index.htm -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- 由开发人员工具生成。它可能不是原始源文件的准确表示形式 -->
-<HTML><HEAD><TITLE>小云APP－领先的社群应用平台</TITLE>
-<META charset=utf-8>
-<META name=description content=小云APP是光音网络（证券代码：835505）旗下产品，专注于为中小企业及个人提供APP无开发制作,是移动社群营销首选平台。>
-<META name=keywords content="APP制作,社群营销,移动营销服务商,APP代理,APP加盟,APP开发,社群APP,移动社群，社区app生成,论坛app生成,社群app生成,社区sdk,论坛sdk,原生移动社区,H5移动社区,wap社群,Discuz客户端转换,Phpwind客户端,移动云社区,移动社群云服务,地方社区,垂直兴趣社区,移动建站,快速建站,小云app,小云 app,xiaoyunapp,xiaoyun app"><LINK rel=stylesheet type=text/css href="./stylesheets/main.css"><LINK rel=stylesheet href="/stylesheets/animate.css" charset=utf-8>
-<SCRIPT src="http://basevistor.udesk.cn:6001/socket.io/?EIO=3&amp;transport=polling&amp;j=0&amp;t=1494483267997-4&amp;b64=1&amp;sid=yhh2g29tNXmqVonpzwNy" async="true"></SCRIPT>
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>上网认证系统 - 登录</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="/styles/util.css">
+<SCRIPT language=javascript src="/scripts/util.js"></SCRIPT>
 
-<SCRIPT charset=utf-8 src="https://tag.baidu.com/vcard/v.js?siteid=8381425&amp;url=http%3A%2F%2Fapp.xiaoyun.com%2F&amp;source=&amp;rnd=1411444743&amp;hm=1"></SCRIPT>
+<SCRIPT language=javascript>
+function preSubmit(){
+	var usr = $("username"),
+		pwd = $("password"),
+		hPwd = $("pwd"),
+		re = / /g,
+		usrStr, pwdStr,
+		msg = null;
 
-<SCRIPT src="http://xiaoyunapp.udesk.cn/im_client/js/udeskApi.js?_t=1463034734239" async="1"></SCRIPT>
+	if(usr.value.length <= 0){
+		valid = false;
+		msg = "用户名不能为空！";
+	}else if(usr.value.length > 95){
+		valid = false;
+		msg = "用户名长度不能超过95个字节！";
+	}
+	if(msg){
+		alert(msg);
+		return false;
+	}
+	hPwd.value = pwd.value;
+	return true;
+}
 
-<SCRIPT type=text/javascript src="http://dn-growing.qbox.me/vds.js" async="true"></SCRIPT>
+function initPage(){
+	var msg = initMsg(true), username, usernameDom = $("username");
+	if(msg){
+		var result = msg.match(/\(([^\)]+)\)/);
+		if(result){
+			username = result[1];
+			usernameDom.value = username;
+		}
+		showMsg(msg);
+	}
+	usernameDom.focus();
+}
+</SCRIPT>
 
-<SCRIPT src="/javascripts/response_screen.js"></SCRIPT>
-
-<SCRIPT type=text/javascript>
-      var _vds = _vds || [];
-      window._vds = _vds;
-      (function(){
-        _vds.push(['setAccountId', 'a3e401e69a0ee7e4']);
-        (function() {
-          var vds = document.createElement('script');
-          vds.type='text/javascript';
-          vds.async = true;
-          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(vds, s);
-        })();
-      })();
-    </SCRIPT>
+<STYLE type=text/css>.text-field-wrap {
+	PADDING-LEFT: 60px
+}
+</STYLE>
 </HEAD>
-<BODY><!-- <a id="window" href="/nezha"></a> -->
-<DIV id=header>
-<DIV class=wrapper>
-<DIV class=logo><A href="/"><IMG src="./images/xiaoyun-logo@2x.png"></A> </DIV>
-<DIV class=right-bar>
-<DIV class=menu>
-<UL>
-<LI class="menu-item active"><A href="/">首页</A></LI>
-<LI class=menu-item><A href="http://bbs.xiaoyun.com">官方社区</A></LI>
-<LI class=menu-item><A href="/cooperation">合作加盟</A></LI></UL></DIV>
-<DIV class=session>
-<UL>
-<LI class=session-item><A class="btn signin" href="http://console.app.xiaoyun.com/signin" target=_blank>登录</A> </LI>
-<LI class=session-item><A class="btn signup" href="http://console.app.xiaoyun.com/signup" target=_blank>注册</A> </LI></UL></DIV></DIV></DIV></DIV>
-<DIV id=content><!-- overview -->
-<DIV class=overview>
-<DIV class=wrapper>
-<DIV class=textinfo>
-<H2 class=title>来小云轻松定制</H2>
-<H3 class=subtitle>您的专属APP</H3>
-<DIV class=text>
-<P>覆盖全行业的社群APP解决方案，以更多的选择满足您的业务需求。</P></DIV><A class="btn btn-create" href="http://console.app.xiaoyun.com/signin" target=_blank>立即制作APP</A> </DIV>
-<DIV class=image><IMG src="/images/hand@2x.png"> </DIV></DIV></DIV><!-- introduce -->
-<DIV class=introduce>
-<DIV class=wrapper>
-<DIV class=text-panel>
-<H3 class=title>小云APP－领先的社群应用平台</H3>
-<P class=text>无论是个人、开发者还是企业主，都能快速构建专属的移动APP应用。连接微信和搜索引擎流量入口，通过内容或服务将用户沉淀到APP中，多种运营工具培养用户粘性，电商和广告带给你持续的收入回报。小云APP是您步入移动互联网的绝佳解决方案。</P></DIV>
-<DIV class="icon-panel revealOnScroll" data-animation="fadeInUp">
-<UL>
-<LI><IMG class=icon src="/images/intro-icon-quick@2x.png"> 
-<H3 class=icon-title>快速创建</H3>
-<P class=icon-text>特色模版＋模块化编辑方式，快速生成高体验的原生APP＋微信站＋移动H5站三端形态应用。</P></LI>
-<LI><IMG class=icon src="/images/intro-icon-safe@2x.png"> 
-<H3 class=icon-title>独立专属</H3>
-<P class=icon-text>内容和功能自由控制，用户和数据完全私有。独立上架应用市场和账号体系，真正专属自己的移动应用。</P></LI>
-<LI><IMG class=icon src="/images/intro-icon-customer@2x.png"> 
-<H3 class=icon-title>轻松获客</H3>
-<P class=icon-text>支持微信、qq快速登录；搜索引擎收录；微信公帐关注等多种获客方式。</P></LI>
-<LI><IMG class=icon src="/images/intro-icon-operate@2x.png"> 
-<H3 class=icon-title>简单运营</H3>
-<P class=icon-text>服务市场为运营者系统地提供工具软件、运营服务、咨询教程等增值服务。</P></LI></UL></DIV></DIV></DIV><!-- solution --><!-- <div class="solution">
-        <div class="wrapper">
-            <div class="header">
-                <h3 class="title">用小云APP轻松实现属于自己的APP</h3>
-                <p class="text">小云领先移动社群服务平台，覆盖全行业的社群应用解决方案，以更多的选择满足你业务需求。</p>
-            </div>
-            <div class="body">
-                <div class="left">
-                    <ul class="solution-list">
-                        <li class="solution-title active" data-detail="o2o">地方O2O类</li>
-                        <li class="solution-title" data-detail="hobby">兴趣爱好类</li>
-                        <li class="solution-title" data-detail="ebusiness">垂直电商类</li>
-                        <li class="solution-title" data-detail="community">社区组织类</li>
-                        <li class="solution-title" data-detail="traditional">行业类</li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <div class="solution-detail animated active" id="o2o">
-                        <ul class="icon-list">
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-xcxxg@2x.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-xcxxg@2x.png" />
-                                <p class="icon-text">新昌信息港</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-zhdf.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-zhdf.jpg" />
-                                <p class="icon-text">智慧登封</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-wcjbb.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-wcjbb.png" />
-                                <p class="icon-text">吴川脚爆爆</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-jydsw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-jydsw.png" />
-                                <p class="icon-text">江油都市网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-lykk.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-lykk.png" />
-                                <p class="icon-text">龙岩KK网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-lqsbz.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-lqsbz.png" />
-                                <p class="icon-text">乐清上班族</p>
-                            </li>
-                        </ul>
-                        <p class="detail-text">小云APP为地方社区提过多种解决方案，其中以地方O2O为核心。通过使用各类O2O插件，让小区、城镇等都可以打造移动端本地生活消费服务平台，拥有商家入驻、商家审核等功能，加速社区盈利。</p>
-                    </div>
-                    <div class="solution-detail animated" id="hobby">
-                        <ul class="icon-list">
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-bzrslt@2x.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-bzrslt@2x.jpg" />
-                                <p class="icon-text">编织人生论坛</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-snss.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-snss.png" />
-                                <p class="icon-text">少年盛世</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-mgahz.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-mgahz.png" />
-                                <p class="icon-text">木工爱好者</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-drzj@2x.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-drzj@2x.png" />
-                                <p class="icon-text">多肉之家</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-ady.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-ady.png" />
-                                <p class="icon-text">爱钓鱼</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-xtmwq.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-xtmwq.png" />
-                                <p class="icon-text">小T模玩圈</p>
-                            </li>
-                        </ul>
-                        <p class="detail-text">小云APP为您提供构建兴趣类移动社区的全套解决方案。在这里，您可以轻松发起线上线下活动，促进社区内部氛围；还可以将您的社区推广到微信、QQ等各大社交平台，吸引有相同兴趣的用户，扩大社区影响力。</p>
-                    </div>
-                    <div class="solution-detail animated" id="ebusiness">
-                        <ul class="icon-list">
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-ncmmw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-ncmmw.png" />
-                                <p class="icon-text">南充妈妈网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-wzw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-wzw.png" />
-                                <p class="icon-text">玩主网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-sgw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-sgw.png" />
-                                <p class="icon-text">搜龟网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-gytx.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-gytx.png" />
-                                <p class="icon-text">龟友天下</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-lndylt.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-lndylt.png" />
-                                <p class="icon-text">辽宁钓鱼论坛</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-lptq.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-lptq.png" />
-                                <p class="icon-text">朗牌特曲</p>
-                            </li>
-                        </ul>
-                        <p class="detail-text">小云APP通过超链插件为母婴、化妆品、土特产等各类垂直电商提供解决方案。同时为垂直电商提供活动类插件，支持发起商城活动，提高商城用户活跃，提高销售额。</p>
-                    </div>
-                    <div class="solution-detail animated" id="community">
-                        <ul class="icon-list">
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-ddmmw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-ddmmw.png" />
-                                <p class="icon-text">丹东妈妈网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-czyx.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-czyx.png" />
-                                <p class="icon-text">穿针引线</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-xqnmzlt.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-xqnmzlt.png" />
-                                <p class="icon-text">新青年麻醉论坛</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-lblzj.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-lblzj.png" />
-                                <p class="icon-text">淋巴瘤之家</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-jslt.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-jslt.png" />
-                                <p class="icon-text">竞速论坛</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-yq@2x.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-yq@2x.png" />
-                                <p class="icon-text">药圈</p>
-                            </li>
-                        </ul>
-                        <p class="detail-text">小云APP为企业、组织、机构提供操作简单、功能丰富的解决方案，让您迅速实现用户沉淀聚合，拥有多种方式触达社群用户的方式。</p>
-                    </div>
-                    <div class="solution-detail animated" id="traditional">
-                        <ul class="icon-list">
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-5imx.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-5imx.png" />
-                                <p class="icon-text">5iMX</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-yzsemsw.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-yzsemsw.png" />
-                                <p class="icon-text">叶子少儿美术网</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-sgb.jpg" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-sgb.jpg" />
-                                <p class="icon-text">水果邦</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-ayk.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-ayk.png" />
-                                <p class="icon-text">遨游客</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-ykm.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-ykm.png" />
-                                <p class="icon-text">遥控迷</p>
-                            </li>
-                            <li class="app-example">
-                                <img class="icon" src="/images/solution-icon-zyzx.png" />
-                                <img class="qrcode-icon" src="/images/solution-qrcode-zyzx.png" />
-                                <p class="icon-text">中羽在线</p>
-                            </li>
-                        </ul>
-                        <p class="detail-text">小云APP面向教育、旅行、母婴、等各行业提供最专业、最合适的解决方案，让您的移动社区符合您的行业特色，为您的行业发展助力。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --><!-- features -->
-<DIV class="feature iw400 left feature-1">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInLeft"><IMG src="/images/feature-1@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>原生体验的移动APP</H3>
-<P class=text>原生Native技术生成APP，适配iOS、Android等多个系统版本，为用户提供流畅的客户端体验。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature iw400 right feature0">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInRight"><IMG src="/images/feature0@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>社群经济引爆电商交易</H3>
-<P class=text>对接淘宝、有赞商城电商平台，植入支付模块，实现社群应用商业化落地。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature iw400 left feature1">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInLeft"><IMG src="/images/feature1@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>界面功能自由配置</H3>
-<P class=text>多样模版＋自定义UI＝个性的专属移动客户端。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature right nopaddingbottom feature2">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInRight"><IMG src="/images/feature2@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>云端轻松部署</H3>
-<P class=text>应用云端部署，便捷管理，高性能和可靠性的数据处理保障。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature left iw400 feature3">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInLeft"><IMG src="/images/feature3@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>
-<P>无缝对接PC论坛</P>
-<P>数据专属独立</P></H3>
-<P class=text>支持Discuz&amp;Phpwind论坛一键转换，网站和手机无缝融合，数据完全独立。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature right nopadding iw350 mt50 feature4">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInRight"><IMG src="/images/feature4@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>
-<P>消息随时推送</P>
-<P>提升日活度</P></H3>
-<P class=text>不限时消息推送，内容自由定制，引导用户参与关注。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature left iw400 feature5">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInLeft"><IMG src="/images/feature5@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>
-<P>丰富应用市场</P>
-<P>增加用户粘性</P></H3>
-<P class=text>丰富的应用市场，可直接借鉴的实践案例，让用户乐在社群中。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature right ipa50 feature6">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInRight"><IMG src="/images/feature6@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>轻松便捷的移动分享</H3>
-<P class=text>轻松分享到朋友圈，支持公众号内绑定，免费提供与客户端一样的WAP站，让用户参与后再留下来。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature left feature7">
-<DIV class=wrapper>
-<DIV class="image revealOnScroll" data-animation="fadeInLeft"><IMG src="/images/feature7@2x.png"> </DIV>
-<DIV class=detail>
-<H3 class=title>
-<P>API端口开放</P>
-<P>支持二次开发</P></H3>
-<P class=text>开放的API端口，支持二次开发，写出自己的专属插件。</P></DIV></DIV></DIV><!-- features -->
-<DIV class="feature right feature8">
-<DIV class=wrapper>
-<DIV class=detail>
-<H3 class=title>广告形式更多样</H3>
-<P class=text>“信息流广告，让我们电商每日收入增长了50%！”</P></DIV>
-<DIV class="image revealOnScroll" data-animation="fadeInRight"><IMG src="/images/feature8@2x.png"> </DIV></DIV></DIV><!-- example -->
-<DIV class="example home">
-<DIV class=header><!-- <p>小云APP为超过 <span class="e-nb">50000</span> 个社群提供移动服务</p>
-            <p>社群覆盖 <span class="e-nb">1000</span> 万用户，社群日均PV <span class="e-nb">5000</span> 万</p> -->
-<H1 style="MARGIN-BOTTOM: 0px; FONT-WEIGHT: lighter">优质案例</H1>
-<P style="FONT-SIZE: 12px">由小云APP制作 </P></DIV>
-<DIV class=wrapper>
-<DIV class="body revealOnScroll" data-animation="fadeIn"><IMG src="/images/example@2x.png" height=280> </DIV></DIV><!-- <div class="footer">完善的服务体系</div>
-        <div class="footer-content">
-            <ul>
-                <li>
-                    <h3 class="title">培训支持</h3>
-                    <p>为您提供产品试用和维护培训、运营培训</p>
-                </li>
-                <li>
-                    <h3 class="title">高级支持</h3>
-                    <p>为您提供7*12小时的在线客户服务支持</p>
-                </li>
-                <li>
-                    <h3 class="title">应用支持</h3>
-                    <p>专人帮您更新应用帮您将更好的功能与服务传递给用户</p>
-                </li>
-                <li>
-                    <h3 class="title">服务论坛</h3>
-                    <p>为您提供在线的帮助中心，我们的知识库</p>
-                </li>
-            </ul>
-        </div> --></DIV>
-<DIV class=small-footer>
-<DIV class=wrapper>
-<DIV class=nav>
-<UL>
-<LI class=menu-item><A href="//www.xiaoyun.com/">小云官网</A></LI>
-<LI>|</LI>
-<LI class=menu-item><A href="/about">关于我们</A></LI></UL></DIV>
-<DIV class=copyright>Copyright © 2003-2016 Goyoo. All rights Reserved. 北京光音网络发展股份有限公司 版权所有 </DIV></DIV></DIV></DIV>
-<DIV id=footer>
-<DIV class=wrapper>
-<DIV class=bottom-logo><IMG src="/images/bottom-logo.png"> </DIV>
-<DIV class=connection>
-<UL>
-<LI>
-<P>咨询邮箱: xiaoyun@goyoo.com</P></LI><!-- <li>
-                <p>咨询QQ：2881119393</p>
-                </li>
-                <li>
-                <p>电话: 8610-84030059</p>
-                </li> --></UL></DIV>
-<DIV class=btn-panel><A class="btn btn-onekey" href="http://console.app.xiaoyun.com/signin" target=_blank>立即制作APP</A> </DIV></DIV></DIV>
-<SCRIPT> (function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","http://xiaoyunapp.udesk.cn/im_client/js/udeskApi.js?_t=1463034734239","ud"); ud({"code":"e10e4fg","link":"http://xiaoyunapp.udesk.cn/im_client","group_id": "18019","mobile":{"mode":"blank","color":"#F8470A","pos_flag":"crb","onlineText":"在线咨询","offlineText":"请留言","pop":{"direction":"top","arrow":{"top":0,"left":"70%"}}},"mode":"inner","color":"#F8470A","pos_flag":"srb","onlineText":"在线咨询","offlineText":"请留言","pop":{"direction":"top","arrow":{"top":0,"left":"80%"}}}); </SCRIPT>
-
-<SCRIPT src="http://xiaoyunapp.udesk.cn/spa1/im_web_plugins/0/out_config?company_code=e10e4fg&amp;callback=udesk_jsonp0"></SCRIPT>
-
-<SCRIPT type=text/javascript> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe6ff59cee76da00da49beaccb7349c82' type='text/javascript'%3E%3C/script%3E")) </SCRIPT>
-
-<SCRIPT src="http://basevistor.udesk.cn:6001/customerApi/key?_=&amp;is_invite=1&amp;key=547a5a89-f793-4a57-92a3-19500b159cca&amp;code=e10e4fg&amp;url=http%3A%2F%2Fapp.xiaoyun.com%2F&amp;referrer=&amp;keyword=&amp;title=%E5%B0%8F%E4%BA%91APP%EF%BC%8D%E9%A2%86%E5%85%88%E7%9A%84%E7%A4%BE%E7%BE%A4%E5%BA%94%E7%94%A8%E5%B9%B3%E5%8F%B0&amp;scaleScreen=1600*900&amp;callback=udesk_jsonp1"></SCRIPT>
-
-<SCRIPT type=text/javascript src=" http://hm.baidu.com/h.js?e6ff59cee76da00da49beaccb7349c82"></SCRIPT>
-
-<FORM style="POSITION: absolute; TOP: -1000px; LEFT: -1000px" class=socketio accept-charset=utf-8 method=post action=http://basevistor.udesk.cn:6001/socket.io/?EIO=3&amp;transport=polling&amp;j=0&amp;t=1494483267994-3&amp;b64=1&amp;sid=yhh2g29tNXmqVonpzwNy target=eio_iframe_0><TEXTAREA name=d>85:42/customer,["enter",{"key":"547a5a89-f793-4a57-92a3-19500b159cca","code":"e10e4fg"}]</TEXTAREA><IFRAME id=eio_iframe_0 src="javascript:0" name=eio_iframe_0></IFRAME></FORM>
-<SCRIPT charset=utf-8 src="/libs/jquery-2.2.1.min.js"></SCRIPT>
-
-<SCRIPT charset=utf-8 src="/javascripts/main.js"></SCRIPT>
-
-<SCRIPT charset=utf-8 src="/javascripts/solution_control.js"></SCRIPT>
-
-<SCRIPT type=text/javascript src="/javascripts/tj.js"></SCRIPT>
-
-<DIV id=udesk_container>
-<DIV id=udesk_btn><A style="Z-INDEX: 1000000000; BOX-SIZING: border-box; BORDER-BOTTOM: 0px; POSITION: fixed; TEXT-ALIGN: center; BACKGROUND-COLOR: #f8470a; WIDTH: 40px; BOTTOM: 0px; DISPLAY: block; HEIGHT: 40px; COLOR: #fff; FONT-SIZE: 13px; CURSOR: pointer; RIGHT: 0px; TEXT-DECORATION: none; border-radius: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; margin-top: 18px; margin-bottom: 18px; margin-left: 18px; margin-right: 18px"><SPAN style="MARGIN: 10px 10px 0px; WIDTH: 20px; DISPLAY: block; BACKGROUND: url(http://app-widget-cdn-s0.b0.upaiyun.com/dist/images/icon-mq.png?v=npyjcj3l6o17nwmi) no-repeat 0px -20px; FLOAT: left; HEIGHT: 20px; background-size: 40px auto"></SPAN><SPAN style="FILTER: alpha(opacity=10)\9; BACKGROUND-COLOR: #000; WIDTH: 1px; DISPLAY: none; FLOAT: left; HEIGHT: 100%; VERTICAL-ALIGN: middle"></SPAN><SPAN style="LINE-HEIGHT: 40px; OVERFLOW-Y: hidden; MARGIN: 0px 10px; DISPLAY: none; FLOAT: left; HEIGHT: 40px; COLOR: #fff; FONT-SIZE: 13px" id=udesk_btn_text>在线咨询</SPAN><SPAN style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 26px; BACKGROUND-COLOR: #ff3b30; WIDTH: 26px; DISPLAY: none; HEIGHT: 26px; COLOR: #fff; FONT-SIZE: 14px; TOP: -13px; RIGHT: -13px; border-radius: 15px" id=udesk_btn_circle></SPAN></A></DIV></DIV>
-<SCRIPT src="http://xiaoyunapp.udesk.cn/agents/free?callback=udesk_jsonp2"></SCRIPT>
-</BODY></HTML>  
+<BODY onload=initPage();>
+<DIV class=title>上网认证系统 - 登录</DIV>
+<DIV class=content>
+<P style="PADDING-BOTTOM: 10px; COLOR: #666">提示：在您使用网络之前，需要进行身份验证。</P>
+<FORM onsubmit="return preSubmit();" method=post>
+<DIV class=field-wrap><SPAN class=field-label>用户名：</SPAN> 
+<DIV class=text-field-wrap><INPUT id=username class="text-field field-username" type=text name=username> </DIV></DIV>
+<DIV class=field-wrap><SPAN class=field-label>密码：</SPAN> 
+<DIV class=text-field-wrap><INPUT id=password class="text-field field-password" value="" type=password name=password> <INPUT id=pwd type=hidden name=pwd> </DIV></DIV><INPUT value=true type=hidden name=secret> 
+<P style="MARGIN-TOP: 16px; PADDING-LEFT: 60px"><INPUT class=buttons value="登 录" type=submit> </P></FORM>
+<P style="MARGIN-TOP: 30px; PADDING-LEFT: 60px"><A href="/user/user.htm" target=_top>修改密码</A> <A href="/Dkeyauth.exe" target=_top>下载DKEY客户端</A> </P></DIV></BODY></HTML>  
